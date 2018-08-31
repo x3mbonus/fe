@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    height:100vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div {
+    padding: 40px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+.container div:first {
+    padding: 40px;
+    background: #333;
+    color: #fff;
+}
+/*
+.container div.el-2 {
+    flex-grow: 1;
+}
+
+.container div.el-3 {
+    align-self: flex-start;
+}
+*/
+
+.container div:nth-child(3) {
+    align-self: flex-start;
+    
+}
+
+.container div:nth-child(even) {
+    background: #a5d6a7;
+}
+
+.container div:nth-child(odd) {
+    background: #b39ddb;
+}
+
+.container div:nth-child(odd)::before {
+    background: #673ab7;
+}
+
+.container div:nth-child(even)::before {
+    background: #357a38;
+}
+
+
+.container div:before {
+    content:'';
+    position: absolute;
+    bottom:10;
+    right:10;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background: #482880;
+}
+.container div:after {
+    content:'☺';
+    position: absolute;
+    top:10;
+    right:10;
+    height:20px;
+    width:20px;
+    border-radius: 10%;
+    background: #482880;
+}
+
