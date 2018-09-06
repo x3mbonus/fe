@@ -1,0 +1,57 @@
+.cards {
+    height:100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards.horizontal-block {
+    flex-direction: column;
+}
+
+.cards.vertical-block {    
+    flex-direction: row;
+}
+
+.card {
+    margin:1px;
+    padding: 20px;
+    padding-top:40px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px #424242 solid;
+    background: #FAFAFA;
+    width:35px;
+    height:60px;
+    font-size:30px;
+    text-align: center;
+    
+}
+
+.card:before{
+    position: absolute;
+    top:1;
+    left:5;
+    font-size: 30px;
+}
+
+.card:after{
+    position: absolute;
+    bottom:1;
+    right:5;
+    font-size: 30px;
+    transform: rotate(180deg);
+}
+
+/*
+.cards div:nth-child(1){
+    background: #a5d6a7;
+}
+
+.cards div:nth-child(2n){
+    background: #b39ddb;
+}
+
+.cards div:last-child, .cards div:first-child{
+}
+*/

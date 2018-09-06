@@ -1,0 +1,31 @@
+.suit-hearts::before, .suit-hearts::after{
+    content:'♥';
+}
+
+.suit-spades::before, .suit-spades::after{
+    content:'♠';
+}
+
+.suit-clubs::before, .suit-clubs::after{
+    content:'♣';
+}
+
+.suit-diamonds::before, .suit-diamonds::after{
+    content:'♦';
+}
+
+.suit-hearts, .suit-diamonds {
+    color:#E53935;
+}
+
+.suit-spades, .suit-clubs {
+    color:#212121;
+}
+
+.rank-7:nth-child(1) {
+    content: '7'
+}
+
+.rank-7:nth-child(2)::before {
+    content: '7'
+}
