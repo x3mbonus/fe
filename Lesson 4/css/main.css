@@ -1,3 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+}
+
+
+@media only screen and (max-width: 765px) {
+	body {
+        grid-template-columns:1fr;
+    }
+}
+
+@media only screen and 
+(min-width: 768px)and (max-width: 1024px) {
+	body {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+
+
 form {
     max-width: 400px;
     padding: 30px 35px 45px;
@@ -22,12 +46,18 @@ label {
     display: inline-block;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     height: 30px;
     border: 1px solid #ccc;
     border-radius: 3px;
     text-indent: 10px;
+}
+
+textarea{
+    height: 150px;
+    padding: 0px;
 }
 
 input:not([value=""]) {
@@ -40,6 +70,14 @@ input[type="checkbox"] {
     width: 20px;
 }
 
+input[type="file"] {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-indent: 10px;
+}
+
 select {
     width: 100%;
     height: 36px;
@@ -48,11 +86,12 @@ select {
 }
 
 
-.form-action{
+.form-action {
     text-align: center;
 }
 
-button {
+button,
+.inputfile+label {
     background: #42A5F5;
     color: #fff;
     padding: 7px 45px;
@@ -63,9 +102,16 @@ button {
     border-radius: 5px;
 }
 
-body {
-    padding: 0;
-    margin: 0;    
+button:hover,
+.inputfile:focus+label,
+.inputfile+label:hover {
+    background-color: #039BE5;
+}
+
+.page {
+    border: 1px solid #BBDEFB;
+    border-radius: 
+    margin:0 10px;
 }
 
 .footer {
@@ -76,3 +122,28 @@ body {
     padding: 10px;
     margin: 0px;
 }
+
+.inputfile{
+    width:0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label{
+    display: inline-block;
+    cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.inputfile + label * {
+	pointer-events: none;
+}
+
+
+    
